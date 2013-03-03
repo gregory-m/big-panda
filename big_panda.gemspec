@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["man.gregory@gmail.com"]
   gem.description   = %q{A Ruby interface to the Big Panda API}
   gem.summary       = gem.description
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/gregory-m/big-panda"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
