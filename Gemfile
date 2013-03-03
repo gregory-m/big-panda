@@ -5,5 +5,5 @@ gemspec
 
 
 group :development, :test  do
-  gem 'debugger'
+  gem 'debugger', :platforms => :mri_19
 end
