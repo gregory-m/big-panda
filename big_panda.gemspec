@@ -4,12 +4,12 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'big_panda/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = "big_panda"
+  gem.name          = "big-panda"
   gem.version       = BigPanda::VERSION
   gem.authors       = ["Gregory Man"]
   gem.email         = ["man.gregory@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{A Ruby interface to the Big Panda API}
+  gem.summary       = gem.description
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)
