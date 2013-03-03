@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.bigpanda.io/data/events/deployments/end
+    body:
+      encoding: UTF-8
+      string: ! '{"component":"html-editor","version":"123"}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.6
+      Authorization:
+      - Bearer my-access-token
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - nginx/1.2.7
+      Date:
+      - Sun, 03 Mar 2013 15:44:19 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '85'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - GET, POST, DELETE, PUT, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"response\": {\n    \"status\": \"created\",\n    \"id\": \"51336fd391ad50246f00efb3\"\n
+        \ }\n}"
+    http_version:
+  recorded_at: Sun, 03 Mar 2013 15:44:19 GMT
+recorded_with: VCR 2.4.0
