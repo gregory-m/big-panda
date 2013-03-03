@@ -1,5 +1,7 @@
 # BigPanda
 
+[![Dependency Status](https://gemnasium.com/gregory-m/big-panda.png)](https://gemnasium.com/gregory-m/big-panda)
+
 TODO: Write a gem description
 
 ## Installation
