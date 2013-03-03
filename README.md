@@ -8,7 +8,7 @@ TODO: Write a gem description
 
 Add this line to your application's Gemfile:
 
-    gem 'big_panda'
+    gem 'big-panda'
 
 And then execute:
 
@@ -16,11 +16,48 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install big_panda
+    $ gem install big-panda
 
 ## Usage
 
-TODO: Write usage instructions here
+### Simple Usage:
+
+```ruby
+require 'big_panda'
+
+panda = BigPanda::Client.new(access_token: 'my-access-token')
+# => #<BigPanda::Client:0x007f8a39a07038 @target_url="https://api.bigpanda.io", @access_token="my-access-token">
+
+panda.start_deployment({ component: 'html-editor', version: '123' })
+# => {"status"=>"created", "id"=>"513382af21e4d3fc5800d01a"}
+
+panda.finish_deployment({ component: 'html-editor', version: '123' })
+# => {"status"=>"created", "id"=>"5133831091ad50246f00f089"}
+```
+
+### Advanced Usage:
+
+```ruby
+require 'big_panda'
+
+panda = BigPanda::Client.new(access_token: 'my-access-token')
+# => #<BigPanda::Client:0x007f8a39a07038 @target_url="https://api.bigpanda.io", @access_token="my-access-token">
+
+panda.start_deployment({ component: 'html-editor', version: '123',
+                         timestamp: Time.now.to_i, description: 'Deploying new version',
+                         owner: 'Gregory Man', env: 'Production', source: 'chef',
+                         hosts: ['a1.wix.com', 'a2.wix.com']
+                       })
+# => {"status"=>"created", "id"=>"51338369b4a7ea843100ceb3"}
+
+
+panda.finish_deployment({ component: 'html-editor', version: '123',
+                          timestamp: Time.now.to_i, status: 'failure', errorMessage: 'Ooops',
+                          hosts: ['a1.wix.com', 'a2.wix.com']
+                        })
+# => {"status"=>"created", "id"=>"513383e021e4d3fc5800d02d"}
+```
+
 
 ## Contributing
 
