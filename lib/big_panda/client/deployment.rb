@@ -56,7 +56,7 @@ module BigPanda
       #
       #   finish_deployment({ component: 'html-editor', version: '123',
       #   timestamp: Time.now.to_i, status: 'failure', errorMessage: 'Ooops',
-      #   hosts: ['a1.wix.com', 'a2.wix.com']
+      #   hosts: ['a1.wix.com', 'a2.wix.com']})
       #   # => {"status"=>"created", "id"=>"51336b39b4a7ea843100cdb8"}
       #
       # Returns status and ID
