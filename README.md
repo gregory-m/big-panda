@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/gregory-m/big-panda.png?branch=master)](https://travis-ci.org/gregory-m/big-panda) [![Dependency Status](https://gemnasium.com/gregory-m/big-panda.png)](https://gemnasium.com/gregory-m/big-panda)
 
-TODO: Write a gem description
+A Ruby interface to the Big Panda API.
 
 ## Installation
 
