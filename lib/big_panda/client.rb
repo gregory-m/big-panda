@@ -9,7 +9,7 @@ module BigPanda
     include Request
     include Deployment
 
-    attr_reader :access_token, :target_url
+    attr_reader :access_token, :target_url, :ssl
 
     def initialize(options={})
       @target_url = BigPanda::DEFAULT_TARGET_URL
@@ -17,7 +17,7 @@ module BigPanda
       mandatory_options = [ :access_token ]
       check_mandatory_options(options, mandatory_options)
       @access_token = options[:access_token]
-
+      @ssl = options[:ssl] ? options[:ssl] : {}
     end
   end
 end
