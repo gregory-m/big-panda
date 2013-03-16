@@ -61,7 +61,7 @@ panda.finish_deployment({ component: 'html-editor', version: '123',
 ### SSL Options
 You can pass ssl options to BigPanda::Client.new
 ```ruby
-BigPanda::Client.new(access_token: 'my-access-token', ssl: {ssl: {ca_file: '/my/cert.pem'}})
+BigPanda::Client.new(access_token: 'my-access-token', ssl: {ca_file: '/my/cert.pem'})
 ```
 Avalible SSL options (same as in net/http):
 ```
