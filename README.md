@@ -58,6 +58,22 @@ panda.finish_deployment({ component: 'html-editor', version: '123',
 # => {"status"=>"created", "id"=>"513383e021e4d3fc5800d02d"}
 ```
 
+### SSL Options
+You can pass ssl options to BigPanda::Client.new
+```ruby
+BigPanda::Client.new(access_token: 'my-access-token', ssl: {ssl: {ca_file: '/my/cert.pem'}})
+```
+Avalible SSL options (same as in net/http):
+```
+:client_cert
+:client_key
+:ca_file
+:ca_path
+:verify_depth
+:version
+```
+
+
 
 ## Contributing
 
