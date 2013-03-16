@@ -14,6 +14,8 @@ module BigPanda
           request.headers['Accept'] = "application/json"
         end
 
+        raise Unauthorized if response.status == 401
+
         response.body
       end
     end

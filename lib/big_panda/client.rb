@@ -1,5 +1,6 @@
 require 'big_panda/client/connection'
 require 'big_panda/client/request'
+require 'big_panda/client/errors'
 require 'big_panda/client/deployment'
 
 module BigPanda

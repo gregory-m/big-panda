@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.bigpanda.io/test
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.6
+      Authorization:
+      - Bearer bad-access-token
+      Accept:
+      - application/json
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx/1.2.7
+      Date:
+      - Sat, 16 Mar 2013 22:03:50 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+      Www-Authenticate:
+      - Bearer realm="Users", error="invalid_token"
+    body:
+      encoding: UTF-8
+      string: Unauthorized
+    http_version: 
+  recorded_at: Sat, 16 Mar 2013 22:03:50 GMT
+recorded_with: VCR 2.4.0
