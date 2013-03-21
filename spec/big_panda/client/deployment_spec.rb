@@ -29,7 +29,7 @@ describe BigPanda::Client::Deployment do
       end
     end
 
-    context "with all aoptional params", vcr: { cassette_name: 'start_deployment_with_optional' } do
+    context "with all optional params", vcr: { cassette_name: 'start_deployment_with_optional' } do
       let(:options) {{
           component: 'html-editor', version: '123', timestamp: Time.now.to_i,
           description: 'Deploying new version', owner: 'Gregory Man',
